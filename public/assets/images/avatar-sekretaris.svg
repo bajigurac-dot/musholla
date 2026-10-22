@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="bg-sekretaris" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF" />
+      <stop offset="100%" stop-color="#DBEAFE" />
+    </linearGradient>
+    <linearGradient id="peci-grad-2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D3748" />
+      <stop offset="50%" stop-color="#1A202C" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="skin-grad-2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDE0C2" />
+      <stop offset="100%" stop-color="#EBB68A" />
+    </linearGradient>
+    <linearGradient id="shirt-sekretaris" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#172554" />
+    </linearGradient>
+    <clipPath id="circle-clip-2">
+      <circle cx="60" cy="60" r="60" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#circle-clip-2)">
+    <!-- Background Circle -->
+    <rect width="120" height="120" fill="url(#bg-sekretaris)" />
+
+    <!-- Subtle decorative glow -->
+    <circle cx="60" cy="45" r="42" fill="#FFFFFF" opacity="0.35" />
+
+    <!-- Baju Koko / Badan -->
+    <path d="M18 120 C22 96 38 84 60 84 C82 84 98 96 102 120 Z" fill="url(#shirt-sekretaris)" />
+    <!-- Kerah Koko -->
+    <path d="M52 84 L60 96 L68 84 Z" fill="#FDE0C2" />
+    <path d="M48 83 C54 87 66 87 72 83 L68 97 C64 99 56 99 52 97 Z" fill="#1E40AF" />
+    <!-- Garis Kancing Perak Halus -->
+    <line x1="60" y1="96" x2="60" y2="120" stroke="#93C5FD" stroke-width="2" stroke-linecap="round" />
+    <circle cx="60" cy="102" r="1.5" fill="#BFDBFE" />
+    <circle cx="60" cy="110" r="1.5" fill="#BFDBFE" />
+    <circle cx="60" cy="118" r="1.5" fill="#BFDBFE" />
+
+    <!-- Leher -->
+    <rect x="52" y="70" width="16" height="18" rx="4" fill="url(#skin-grad-2)" />
+
+    <!-- Telinga -->
+    <circle cx="37" cy="58" r="6.5" fill="#EBB68A" />
+    <circle cx="83" cy="58" r="6.5" fill="#EBB68A" />
+    <circle cx="37" cy="58" r="4" fill="#D99B6A" opacity="0.5" />
+    <circle cx="83" cy="58" r="4" fill="#D99B6A" opacity="0.5" />
+
+    <!-- Wajah / Kepala -->
+    <ellipse cx="60" cy="58" rx="22" ry="24" fill="url(#skin-grad-2)" />
+
+    <!-- Alis -->
+    <path d="M44 48 C47 46 52 46 55 48" stroke="#374151" stroke-width="2" stroke-linecap="round" fill="none" />
+    <path d="M65 48 C68 46 73 46 76 48" stroke="#374151" stroke-width="2" stroke-linecap="round" fill="none" />
+
+    <!-- Kacamata Rapi (Amanah & Intelektual Sekretaris) -->
+    <rect x="43" y="49" width="13" height="10" rx="3" stroke="#475569" stroke-width="1.8" fill="rgba(255,255,255,0.45)" />
+    <rect x="64" y="49" width="13" height="10" rx="3" stroke="#475569" stroke-width="1.8" fill="rgba(255,255,255,0.45)" />
+    <line x1="56" y1="54" x2="64" y2="54" stroke="#475569" stroke-width="1.8" />
+    <line x1="39" y1="53" x2="43" y2="54" stroke="#475569" stroke-width="1.5" />
+    <line x1="77" y1="54" x2="81" y2="53" stroke="#475569" stroke-width="1.5" />
+
+    <!-- Mata Ramah di balik kacamata -->
+    <circle cx="49.5" cy="54" r="2.2" fill="#1F2937" />
+    <circle cx="70.5" cy="54" r="2.2" fill="#1F2937" />
+    <circle cx="50.2" cy="53.2" r="0.8" fill="#FFFFFF" />
+    <circle cx="71.2" cy="53.2" r="0.8" fill="#FFFFFF" />
+
+    <!-- Hidung -->
+    <path d="M60 55 L58.5 61.5 L61.5 61.5" stroke="#D99B6A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+    <!-- Senyum Bersahabat -->
+    <path d="M53 66 C57 70.5 63 70.5 67 66" stroke="#9A3412" stroke-width="2" stroke-linecap="round" fill="none" />
+
+    <!-- Peci / Kopiah Hitam Khas Indonesia -->
+    <path d="M36 44 C36 40 40 26 60 25 C80 26 84 40 84 44 Z" fill="url(#peci-grad-2)" />
+    <!-- Lis Bawah Peci -->
+    <path d="M35 44 C42 46 78 46 85 44 L85 47 C78 49 42 49 35 47 Z" fill="#111827" />
+    <!-- Aksen Bordir Halus di Puncak Peci -->
+    <path d="M52 26 C56 25.5 64 25.5 68 26" stroke="#93C5FD" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6" />
+  </g>
+</svg>

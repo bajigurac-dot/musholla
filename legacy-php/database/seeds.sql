@@ -1,0 +1,81 @@
+-- Seeder Data Awal Musholla Ar-rahman
+-- Berdasarkan detail isi web.md
+
+-- 1. Akun Admin Default (Password default: admin123 & editor123)
+-- Hash bcrypt untuk 'admin123' adalah: $2y$10$eE0mBqG7M.sP58vW9Rfe/OKf7X0i5kY6XqP7W8k0Zg9Q0N8fKz7ye
+-- Hash bcrypt untuk 'editor123' adalah: $2y$10$wE9s3K2p8L2pB8fW0Rfe/.t6N7M0i6pY8QqP8X9k1Zh0R1O9gL0ye
+
+INSERT INTO `users` (`id`, `name`, `username`, `email`, `password_hash`, `role`, `is_active`, `created_at`) VALUES
+(1, 'Super Admin DKM', 'admin', 'dkm.musholla.arrahman@gmail.com', '$2y$10$3Ym22zMhK2i7i8.g8G6r9uFm8XnQZ9hW1w6L2xO0ZqN1l3k4j5h6a', 'super_admin', 1, NOW()),
+(2, 'Editor Publikasi', 'editor', 'editor@musholla-arrahman.id', '$2y$10$3Ym22zMhK2i7i8.g8G6r9uFm8XnQZ9hW1w6L2xO0ZqN1l3k4j5h6a', 'editor', 1, NOW())
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`);
+
+-- Catatan: Password admin dan editor diinisialisasi dinamis oleh DatabaseSeeder.php dengan hash password_hash('admin123', PASSWORD_BCRYPT).
+
+-- 2. Data Pengaturan Profil (Settings)
+INSERT INTO `settings` (`setting_key`, `setting_value`, `description`) VALUES
+('mushola_name', 'Musholla Ar-rahman', 'Nama resmi musholla'),
+('tagline', 'Pusat Ibadah, Kebersamaan, dan Pembinaan Umat di Lingkungan Gembor Periuk Tangerang', 'Tagline / Slogan'),
+('history', 'Musholla Ar-rahman berdiri sejak tahun 1990 dengan gotong royong warga sekitar dan dibantu oleh pemerintah setempat untuk kegiatan beribadah lingkungan sekitarnya sehingga warga masyarakat semakin taat dan semangat dalam melakukan beribadah.', 'Sejarah berdirinya musholla'),
+('vision', 'Terwujudnya Musholla Ar-rahman sebagai pusat ibadah yang makmur, membina ukhuwah islamiyah, dan melahirkan generasi Qur\'ani yang berakhlakul karimah.', 'Visi musholla'),
+('mission', '1. Menyelenggarakan sholat berjamaah lima waktu tepat waktu dan istiqomah.\n2. Mengadakan kajian keislaman dan yasinan rutin untuk mempererat silaturahmi warga.\n3. Mengelola sarana dan prasarana ibadah yang bersih, nyaman, dan ramah bagi seluruh jamaah.\n4. Membina anak-anak dan generasi muda dalam baca tulis Al-Qur\'an.\n5. Mewujudkan pengelolaan keuangan musholla yang transparan, amanah, dan akuntabel.', 'Misi musholla'),
+('facilities', 'Ruang Sholat Ber-AC, Tempat Wudhu Pria & Wanita Terpisah, Sound System Berkualitas, Perpustakaan Mini & Al-Qur\'an Wakaf, Kamar Mandi Bersih, Area Parkir Motor, Karpet Sholat Nyaman, Genset Cadangan Listrik.', 'Fasilitas musholla'),
+('address', 'Jl. Anyer RT 007 RW 07, Kelurahan Gembor, Kecamatan Periuk, Kota Tangerang, Banten 15133', 'Alamat lengkap'),
+('phone_1', '0813-8619-8079', 'Kontak pengurus 1 (WhatsApp)'),
+('phone_2', '0812-9465-6075', 'Kontak pengurus 2 (WhatsApp)'),
+('email', 'dkm.musholla.arrahman@gmail.com', 'Email resmi pengurus'),
+('maps_url', 'https://maps.app.goo.gl/JZzSrDEKjCseGwgw7?g_st=aw', 'Tautan Google Maps'),
+('maps_embed', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15866.505295982056!2d106.577239!3d-6.180424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f8c6543b5935%3A0x6b4847e9545dc6a9!2sGembor%2C%20Periuk%2C%20Tangerang%20City%2C%20Banten!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid', 'Embed URL Google Maps'),
+('dkm_lead', 'USTADZ TATA A.S', 'Ketua DKM'),
+('dkm_treasurer', 'Bapak Suwadi', 'Bendahara DKM'),
+('dkm_secretary', 'Bapak Bakri', 'Sekretaris DKM'),
+('donation_active', '1', 'Status modul donasi (1=aktif, 0=nonaktif)'),
+('donation_bank', 'Bank BJB', 'Nama bank rekening donasi'),
+('donation_account', '0152632533100', 'Nomor rekening resmi'),
+('donation_holder', 'Musholla Ar-rahman', 'Atas nama rekening'),
+('donation_notes', 'Donasi dapat ditransfer melalui rekening resmi Bank BJB di atas. Mohon sertakan kode unik atau konfirmasi bukti transfer via WhatsApp ke nomor pengurus agar pencatatan infaq/sedekah tertib dan amanah.', 'Petunjuk konfirmasi donasi'),
+('finance_active', '1', 'Status modul laporan kas keuangan publik (1=aktif, 0=nonaktif)'),
+('prayer_mode', 'api', 'Mode jadwal salat (api / manual)'),
+('prayer_city', 'Kota Tangerang', 'Kota perhitungan jadwal salat'),
+('hero_image', '', 'Foto hero beranda'),
+('logo_image', '', 'Logo musholla'),
+('qris_image', '', 'Gambar QRIS resmi')
+ON DUPLICATE KEY UPDATE `setting_value`=VALUES(`setting_value`);
+
+-- 3. Data Berita dan Pengumuman
+INSERT INTO `posts` (`id`, `title`, `slug`, `category`, `excerpt`, `content`, `image`, `author`, `status`, `views`, `created_at`) VALUES
+(1, 'Jadwal Pengajian Rutin Bulanan dan Kajian Fiqih Ibadah', 'jadwal-pengajian-rutin-bulanan-dan-kajian-fiqih-ibadah', 'Berita', 'DKM Musholla Ar-rahman Gembor Periuk mengundang seluruh warga jamaah dalam pengajian rutin bulanan yang diselenggarakan setiap Ahad pagi pekan pertama.', '<p>Assalamu\'alaikum Warahmatullahi Wabarakatuh,</p><p>Segala puji bagi Allah SWT yang senantiasa melimpahkan rahmat dan hidayah-Nya kepada kita semua. DKM Musholla Ar-rahman mengundang bapak, ibu, serta kaum muslimin dan muslimat warga RT 007 RW 07 Kelurahan Gembor dan sekitarnya untuk menghadiri agenda <strong>Pengajian Rutin Bulanan</strong>.</p><p>Agenda pengajian ini membahas kajian Fiqih Ibadah sehari-hari dan Tausiyah pemantapan aqidah yang dibimbing langsung oleh Ustadz Tata A.S. Pengajian ini bertujuan mempererat silaturahmi antarwarga serta menambah wawasan keislaman kita.</p><p>Mari kita ajak keluarga tercinta untuk memakmurkan musholla kita. Semoga setiap langkah kaki kita menuju majelis ilmu bernilai pahala berlipat ganda di sisi Allah SWT. Aamiin ya Rabbal \'Alamin.</p>', 'foto-kegiatan-6.jpeg', 'USTADZ TATA A.S', 'Terbit', 142, NOW()),
+(2, 'Pelaksanaan Yasinan dan Doa Bersama Malam Jum\'at Berkah', 'pelaksanaan-yasinan-dan-doa-bersama-malam-jumat-berkah', 'Berita', 'Kegiatan Yasinan rutin setiap malam Jum\'at ba\'da Maghrib terus berjalan istiqomah dengan dihadiri jamaah warga lingkungan sekitar.', '<p>Alhamdulillah, kegiatan yasinan dan tahlil bersama warga yang dilaksanakan setiap malam Jum\'at di Musholla Ar-rahman terus berjalan dengan penuh khidmat dan istiqomah.</p><p>Kegiatan dimulai selepas sholat Maghrib berjamaah, dilanjutkan dengan pembacaan Surat Yasin, tahlil, doa untuk para sesepuh dan warga yang telah mendahului kita, serta ramah tamah setelah sholat Isya berjamaah.</p><p>Kami mengajak segenap pemuda dan bapak-bapak untuk terus hadir dan meramaikan musholla tercinta kita.</p>', 'foto-kegiatan.jpeg', 'Sekretaris DKM', 'Terbit', 98, NOW()),
+(3, 'Pengumuman Kerja Bakti Kebersihan Lingkungan Musholla', 'pengumuman-kerja-bakti-kebersihan-lingkungan-musholla', 'Pengumuman', 'Dalam rangka menjaga kesucian dan kenyamanan tempat ibadah, DKM bersama warga akan mengadakan kerja bakti bersama pada hari Ahad besok.', '<p>Diberitahukan kepada seluruh warga RT 007 RW 07 Kelurahan Gembor, bahwa pengurus DKM Musholla Ar-rahman akan mengadakan kegiatan kerja bakti dan gotong royong membersihkan area dalam musholla, tempat wudhu, serta halaman sekitarnya.</p><p>Hari/Tanggal: Ahad, Pukul 07.30 WIB sampai dengan selesai. Diharapkan bapak-bapak dan remaja membawa peralatan kebersihan seadanya. Konsumsi ringan akan disediakan oleh pengurus.</p><p>Terima kasih atas partisipasi dan kepedulian bersama warga sekalian.</p>', 'foto-kegiatan-9.jpeg', 'Bapak Bakri', 'Terbit', 65, NOW()),
+(4, 'Laporan Penyaluran Infaq dan Pemeliharaan Sarana Ibadah', 'laporan-penyaluran-infaq-dan-pemeliharaan-sarana-ibadah', 'Berita', 'Laporan keterbukaan infaq jamaah yang digunakan untuk pemeliharaan pendingin ruangan (AC) dan kebersihan karpet musholla.', '<p>Sebagai wujud transparansi dan amanah kepengurusan, kami menyampaikan bahwa dana infaq jamaah pada bulan ini sebagian telah dialokasikan untuk pemeliharaan rutin pendingin ruangan (AC) musholla dan pencucian karpet sholat agar jamaah dapat beribadah dengan lebih khusyuk dan nyaman.</p><p>Kami mengucapkan jazakumullah khairan katsiran kepada seluruh donatur dan jamaah yang istiqomah menyisihkan sebagian rezekinya untuk Musholla Ar-rahman.</p>', 'foto-kegiatan-7.jpeg', 'Bapak Suwadi', 'Terbit', 82, NOW())
+ON DUPLICATE KEY UPDATE `title`=VALUES(`title`);
+
+-- 4. Data Kegiatan Musholla (Events)
+INSERT INTO `events` (`id`, `title`, `slug`, `description`, `image`, `event_date`, `start_time`, `end_time`, `location`, `category`, `status`, `created_at`) VALUES
+(1, 'Sholat 5 Waktu Berjamaah', 'sholat-5-waktu-berjamaah', 'Menunaikan sholat fardhu lima waktu (Subuh, Dzuhur, Ashar, Maghrib, Isya) secara berjamaah tepat waktu dengan kumandang adzan dan iqamah.', 'foto-kegiatan-3.jpeg', '2026-10-20', '04:15', '20:00', 'Ruang Utama Musholla Ar-rahman', 'Ibadah Harian', 'Mendatang', NOW()),
+(2, 'Yasinan & Tahlil Malam Jum\'at', 'yasinan-dan-tahlil-malam-jumat', 'Pembacaan Surat Yasin, tahlil, zikir, dan doa bersama untuk keselamatan warga serta mendoakan para sesepuh yang telah berpulang ke rahmatullah.', 'foto-kegiatan.jpeg', '2026-10-23', '18:15', '19:45', 'Musholla Ar-rahman Gembor', 'Mingguan', 'Mendatang', NOW()),
+(3, 'Pengajian Rutin Bulanan Warga', 'pengajian-rutin-bulanan-warga', 'Kajian tafsir tematik dan fiqih ibadah bersama Ustadz Tata A.S untuk seluruh bapak, ibu, dan remaja muslim warga RT 007 RW 07 Gembor Periuk.', 'foto-kegiatan-6.jpeg', '2026-11-01', '08:00', '10:30', 'Musholla Ar-rahman', 'Bulanan', 'Mendatang', NOW()),
+(4, 'Bimbingan Baca Tulis Al-Qur\'an Anak-Anak', 'bimbingan-baca-tulis-al-quran-anak-anak', 'Pembelajaran Iqro dan tahsin Al-Qur\'an untuk anak-anak dan remaja lingkungan sekitar yang dilaksanakan setiap sore hari Senin hingga Kamis.', 'foto-kegiatan-1.jpeg', '2026-10-26', '16:00', '17:30', 'Serambi Musholla Ar-rahman', 'Pendidikan', 'Mendatang', NOW())
+ON DUPLICATE KEY UPDATE `title`=VALUES(`title`);
+
+-- 5. Data Galeri Dokumentasi (Galleries)
+INSERT INTO `galleries` (`id`, `title`, `image`, `category`, `alt_text`, `created_at`) VALUES
+(1, 'Tausiyah dan Kajian oleh Ustadz Tata A.S di Mihrab Musholla', 'foto-kegiatan.jpeg', 'Kajian', 'Ustadz Tata A.S menyampaikan tausiyah dan pengajian kepada jamaah di mihrab Musholla Ar-rahman', NOW()),
+(2, 'Khutbah dan Sambutan Pengurus DKM di Depan Jamaah', 'foto-kegiatan-1.jpeg', 'Kajian', 'Sambutan dan arahan pengurus DKM Musholla Ar-rahman', NOW()),
+(3, 'Jamaah Memakmurkan Ruang Utama Sholat Musholla', 'foto-kegiatan-2.jpeg', 'Ibadah', 'Suasana jamaah yang tertib dan khusyuk di ruang utama', NOW()),
+(4, 'Antusiasme Jamaah Menghadiri Pengajian Rutin', 'foto-kegiatan-3.jpeg', 'Kajian', 'Antusiasme warga dari anak-anak hingga orang tua dalam majelis taklim', NOW()),
+(5, 'Jamaah Khusyuk Mengikuti Acara dari Selasar Musholla', 'foto-kegiatan-4.jpeg', 'Kegiatan', 'Jamaah tetap khusyuk mengikuti rangkaian ibadah dari selasar samping', NOW()),
+(6, 'Sholat Berjamaah Khusyuk Warga Gembor Periuk', 'foto-kegiatan-5.jpeg', 'Ibadah', 'Jamaah menunaikan sholat fardhu berjamaah dengan tertib', NOW()),
+(7, 'Suasana Ibadah Khusyuk & Penanda Waktu Salat Digital', 'foto-kegiatan-6.jpeg', 'Ibadah', 'Fasilitas jam digital penanda waktu salat dan jamaah yang khusyuk', NOW()),
+(8, 'Tampak Depan Musholla Ar-rahman & Pelataran', 'foto-kegiatan-7.jpeg', 'Fasilitas', 'Fasad depan bangunan Musholla Ar-rahman RT 007 RW 07 Gembor Periuk', NOW()),
+(9, 'Pertemuan Rutin & Doa Bersama Pengurus DKM Warga', 'foto-kegiatan-8.jpeg', 'Kegiatan', 'Pengurus DKM dan tokoh masyarakat dalam musyawarah kemakmuran musholla', NOW()),
+(10, 'Silaturahmi Malam Jum\'at (Yasinan & Tahlil Bersama)', 'foto-kegiatan-9.jpeg', 'Sosial', 'Kebersamaan warga melantunkan Surat Yasin, tahlil, dan doa bersama', NOW()),
+(11, 'Tim Hadroh & Remaja Musholla (Remus) Ar-rahman', 'foto-kegiatan-10.jpeg', 'Kegiatan', 'Generasi muda santri dan tim hadroh bersama pengurus DKM Ar-rahman', NOW()),
+(12, 'Jamaah Sholat & Pengajian Akbar di Teras Musholla', 'foto-kegiatan-11.jpeg', 'Ibadah', 'Meluapnya jamaah sholat berjamaah dan pengajian akbar hingga ke teras depan', NOW())
+ON DUPLICATE KEY UPDATE `title`=VALUES(`title`);
+
+-- 6. Data Laporan Kas Keuangan (Financial Reports)
+INSERT INTO `financial_reports` (`id`, `period_month`, `period_year`, `income`, `expense`, `balance`, `description`, `status`, `created_at`) VALUES
+(1, 9, 2026, 4850000.00, 3120000.00, 1730000.00, 'Laporan Kas Bulan September 2026. Pemasukan dari kotak infaq Jumat dan transfer donatur. Pengeluaran untuk listrik PLN, honor kebersihan, dan perlengkapan ibadah.', 'Terbit', NOW()),
+(2, 10, 2026, 5200000.00, 2850000.00, 2350000.00, 'Laporan Kas Bulan Oktober 2026. Pemasukan dari infaq jamaah, sedekah subuh, dan donasi Bank BJB. Pengeluaran untuk operasional rutin dan servis AC.', 'Terbit', NOW())
+ON DUPLICATE KEY UPDATE `description`=VALUES(`description`);

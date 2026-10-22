@@ -1,0 +1,301 @@
+/* ========================================================
+   Admin Panel Design System - Musholla Ar-rahman
+   Sidebar Hijau Gelap (#053E32), Topbar Bersih, Tabel Elegan
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --admin-sidebar-bg: #053E32;
+    --admin-sidebar-hover: #075B4A;
+    --admin-sidebar-active: #09725C;
+    --admin-primary: #075B4A;
+    --admin-gold: #D4AF37;
+    --admin-bg: #F4F7F6;
+    --admin-card: #FFFFFF;
+    --admin-text: #1E293B;
+    --admin-border: #E2E8F0;
+    --admin-radius: 10px;
+    --admin-transition: all 0.2s ease-in-out;
+}
+
+body.admin-body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--admin-bg);
+    color: var(--admin-text);
+    min-height: 100vh;
+    display: flex;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    width: 260px;
+    background-color: var(--admin-sidebar-bg);
+    color: #E2E8F0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    transition: var(--admin-transition);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+.sidebar-header {
+    padding: 22px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.sidebar-header img {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+}
+.sidebar-brand h6 {
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 0.95rem;
+    margin: 0;
+}
+.sidebar-brand span {
+    font-size: 0.72rem;
+    color: var(--admin-gold);
+    font-weight: 600;
+}
+
+.sidebar-menu {
+    padding: 16px 12px;
+    flex: 1;
+    overflow-y: auto;
+}
+.menu-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 700;
+    padding: 12px 14px 6px;
+}
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    transition: var(--admin-transition);
+}
+.sidebar-link:hover {
+    background-color: var(--admin-sidebar-hover);
+    color: #FFFFFF;
+}
+.sidebar-link.active {
+    background-color: var(--admin-sidebar-active);
+    color: #FFFFFF;
+    font-weight: 700;
+    border-left: 4px solid var(--admin-gold);
+}
+.sidebar-link i {
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Main Content Area */
+.admin-main {
+    margin-left: 260px;
+    flex: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 260px);
+}
+
+/* Topbar */
+.admin-topbar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid var(--admin-border);
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+.admin-topbar-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--admin-text);
+    margin: 0;
+}
+.admin-user-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--admin-primary);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Admin Card & Tables */
+.admin-content {
+    padding: 28px;
+    flex: 1;
+}
+.admin-card {
+    background: #FFFFFF;
+    border-radius: var(--admin-radius);
+    border: 1px solid var(--admin-border);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    margin-bottom: 24px;
+}
+.admin-card-header {
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--admin-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.admin-card-header h5 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+.admin-card-body {
+    padding: 22px;
+}
+
+/* Stat Cards */
+.stat-card {
+    padding: 20px;
+    border-radius: var(--admin-radius);
+    background: #FFFFFF;
+    border: 1px solid var(--admin-border);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    transition: var(--admin-transition);
+}
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(7, 91, 74, 0.08);
+}
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.stat-icon.green {
+    background-color: #EBF5F1;
+    color: #075B4A;
+}
+.stat-icon.gold {
+    background-color: #FCF8EE;
+    color: #D4AF37;
+}
+.stat-icon.blue {
+    background-color: #EFF6FF;
+    color: #2563EB;
+}
+.stat-icon.purple {
+    background-color: #F5F3FF;
+    color: #7C3AED;
+}
+.stat-info h3 {
+    font-size: 1.65rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+}
+.stat-info p {
+    font-size: 0.82rem;
+    color: #64748B;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Table Style */
+.table-custom th {
+    background-color: #F8FAFC;
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 2px solid var(--admin-border);
+}
+.table-custom td {
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+/* Responsivitas Admin (Tablet & Ponsel) */
+.table-responsive {
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 991.98px) {
+    .admin-sidebar {
+        margin-left: -260px;
+        box-shadow: 4px 0 25px rgba(0, 0, 0, 0.3);
+    }
+    .admin-sidebar.show {
+        margin-left: 0;
+    }
+    .admin-main {
+        margin-left: 0;
+        width: 100%;
+    }
+    .admin-content {
+        padding: 20px 16px;
+    }
+    .admin-topbar {
+        padding: 12px 16px;
+    }
+    .admin-card-body {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .admin-topbar-title {
+        font-size: 1.1rem !important;
+    }
+    .admin-content {
+        padding: 16px 12px;
+    }
+    .stat-card {
+        padding: 14px;
+        gap: 12px;
+    }
+    .stat-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
+    }
+    .stat-info h3 {
+        font-size: 1.35rem;
+    }
+}

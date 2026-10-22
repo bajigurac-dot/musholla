@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* Global resets matching Bootstrap 5.3 + Modern Islamic Design System */
+a {
+  text-decoration: none;
+}
+
+/* Fix Tailwind CSS v4 .collapse conflict with Bootstrap 5 */
+.collapse {
+  visibility: visible;
+}
+
+.navbar-collapse {
+  visibility: visible !important;
+}
+
+.bg-gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #F3D068 100%) !important;
+  color: #032820 !important;
+}

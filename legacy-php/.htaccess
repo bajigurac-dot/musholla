@@ -1,0 +1,28 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Blokir akses ke folder dan file sensitif
+    RewriteRule ^(\.env|\.git|config|core|models|views|database) - [F,L,NC]
+
+    # Teruskan request aset ke folder public jika ada
+    RewriteCond %{REQUEST_URI} ^/assets/ [NC,OR]
+    RewriteCond %{REQUEST_URI} ^/uploads/ [NC]
+    RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f
+    RewriteRule ^(.*)$ public/$1 [L]
+
+    # Teruskan seluruh request lainnya ke public/index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ public/index.php?r=$1 [QSA,L]
+</IfModule>
+
+# Lindungi file rahasia
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+<FilesMatch "(composer\.json|composer\.lock|\.env|\.env\.example|schema\.sql|seeds\.sql)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

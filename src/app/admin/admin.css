@@ -1,0 +1,107 @@
+/* ========================================================
+   Admin Portal Dedicated Design System - Musholla Ar-rahman
+   Ultra-Premium Modern Dashboard Styling (Zero Bootstrap Bleed)
+   ======================================================== */
+
+.admin-portal {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset external Bootstrap link overrides strictly inside admin portal */
+.admin-portal a {
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.admin-portal a:hover {
+  text-decoration: none !important;
+}
+
+/* Fix input & button font reset */
+.admin-portal input,
+.admin-portal button,
+.admin-portal select,
+.admin-portal textarea {
+  font-family: inherit !important;
+}
+
+/* Premium Custom Scrollbars */
+.admin-portal ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.admin-portal ::-webkit-scrollbar-track {
+  background: transparent;
+}
+.admin-portal ::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.2);
+  border-radius: 9999px;
+}
+.admin-portal ::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.4);
+}
+
+/* Modern Card Shadows & Animations */
+.admin-card {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.admin-card:hover {
+  border-color: rgba(203, 213, 225, 1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+}
+
+/* Active Nav Item Glow */
+.admin-nav-active {
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%) !important;
+  color: #34d399 !important;
+  border-left: 3px solid #10b981 !important;
+  box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.2);
+}
+
+.admin-nav-inactive {
+  color: #94a3b8 !important;
+}
+
+.admin-nav-inactive:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+}
+
+/* Sleek Table Styles */
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.admin-table th {
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.875rem;
+  vertical-align: middle;
+}
+
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tr:hover td {
+  background: #f8fafc;
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="pGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBF5F1"/>
+      <stop offset="100%" stop-color="#D1E8DF"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#pGrad)"/>
+  <circle cx="300" cy="180" r="70" fill="#075B4A" opacity="0.12"/>
+  <path d="M300 135 C288 152 270 172 270 192 L330 192 C330 172 312 152 300 135 Z" fill="#075B4A"/>
+  <rect x="278" y="192" width="44" height="20" fill="#075B4A"/>
+  <path d="M292 212 L292 200 C292 196 308 196 308 200 L308 212 Z" fill="#FFFFFF"/>
+  <text x="300" y="250" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="16" fill="#075B4A" text-anchor="middle">Musholla Ar-rahman</text>
+  <text x="300" y="272" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Dokumentasi & Kegiatan Ibadah</text>
+</svg>

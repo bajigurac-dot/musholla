@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700">
+  <defs>
+    <linearGradient id="bgSky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#043127"/>
+      <stop offset="50%" stop-color="#075B4A"/>
+      <stop offset="100%" stop-color="#021C16"/>
+    </linearGradient>
+    <linearGradient id="glowGold" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#075B4A" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="islamicPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M30 0 L60 30 L30 60 L0 30 Z" fill="none" stroke="rgba(212,175,55,0.06)" stroke-width="1"/>
+      <circle cx="30" cy="30" r="12" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+      <circle cx="30" cy="30" r="4" fill="rgba(212,175,55,0.1)"/>
+    </pattern>
+  </defs>
+  
+  <!-- Sky Background -->
+  <rect width="1600" height="700" fill="url(#bgSky)"/>
+  <rect width="1600" height="700" fill="url(#islamicPattern)"/>
+
+  <!-- Ambient Glows -->
+  <circle cx="300" cy="200" r="280" fill="url(#glowGold)"/>
+  <circle cx="1200" cy="250" r="320" fill="url(#glowGold)"/>
+
+  <!-- Mosque Silhouette Silhouette Layer -->
+  <g opacity="0.25" fill="#032019">
+    <path d="M 0 700 L 0 520 Q 80 500 160 520 L 160 700 Z"/>
+    <!-- Dome Big -->
+    <path d="M 680 700 L 680 530 C 680 430 750 340 800 320 C 850 340 920 430 920 530 L 920 700 Z"/>
+    <path d="M 800 290 A 10 10 0 1 0 804 310 A 8 8 0 1 1 800 290 Z" fill="#D4AF37"/>
+    <!-- Small Left Dome -->
+    <path d="M 520 700 L 520 560 C 520 490 560 440 600 420 C 640 440 680 490 680 560 L 680 700 Z"/>
+    <!-- Small Right Dome -->
+    <path d="M 920 700 L 920 560 C 920 490 960 440 1000 420 C 1040 440 1080 490 1080 560 L 1080 700 Z"/>
+    <!-- Minaret 1 Left -->
+    <rect x="420" y="380" width="28" height="320" rx="3"/>
+    <polygon points="434,310 420,380 448,380"/>
+    <circle cx="434" cy="300" r="5" fill="#D4AF37"/>
+    <!-- Minaret 2 Right -->
+    <rect x="1150" y="380" width="28" height="320" rx="3"/>
+    <polygon points="1164,310 1150,380 1178,380"/>
+    <circle cx="1164" cy="300" r="5" fill="#D4AF37"/>
+  </g>
+</svg>
