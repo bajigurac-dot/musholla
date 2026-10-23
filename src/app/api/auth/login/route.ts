@@ -34,10 +34,11 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ success: true, user });
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Login API error:", error);
+    const errMessage = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
-      { message: "Terjadi kesalahan internal pada server." },
+      { message: `Terjadi kesalahan internal pada server: ${errMessage}` },
       { status: 500 }
     );
   }

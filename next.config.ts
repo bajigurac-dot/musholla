@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  outputFileTracingIncludes: {
+    "/**": ["./database/**/*"],
+  },
 };
 
 export default nextConfig;

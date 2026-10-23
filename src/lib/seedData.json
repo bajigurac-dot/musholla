@@ -1,0 +1,509 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Super Admin DKM",
+            "username": "admin",
+            "email": "dkm.musholla.arrahman@gmail.com",
+            "password_hash": "$2y$10$v.xOKU/RRBlCOUyJ4gwwL.R734Xj/ZpStFdy9r8J8wSH.H6EpntHO",
+            "role": "super_admin",
+            "is_active": 1,
+            "last_login": "2026-10-19 09:12:57",
+            "created_at": "2026-10-19 15:01:44",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 2,
+            "name": "Editor Publikasi",
+            "username": "editor",
+            "email": "editor@musholla-arrahman.id",
+            "password_hash": "$2y$10$XwBKzJKOFJdiHfGN8UxFSO5i9r4n9grZy1djLp4etRWpSu4g35ZGu",
+            "role": "editor",
+            "is_active": 1,
+            "last_login": null,
+            "created_at": "2026-10-19 15:01:44",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 3,
+            "name": "Sekretaris DKM",
+            "username": "sekretaris",
+            "email": "sekretaris@musholla-arrahman.id",
+            "password_hash": "$2b$10$BBhIHy2TSC40MatoRsRareIfF09u9lGJvZ5valuZsoxPjrvIIFX3e",
+            "role": "sekretaris",
+            "is_active": 1,
+            "last_login": null,
+            "created_at": "2026-10-20 00:00:00",
+            "updated_at": "2026-10-20T04:30:29.344Z"
+        },
+        {
+            "id": 4,
+            "name": "Bendahara DKM",
+            "username": "bendahara",
+            "email": "bendahara@musholla-arrahman.id",
+            "password_hash": "$2y$10$3Ym22zMhK2i7i8.g8G6r9uFm8XnQZ9hW1w6L2xO0ZqN1l3k4j5h6a",
+            "role": "bendahara",
+            "is_active": 1,
+            "last_login": null,
+            "created_at": "2026-10-20 00:00:00",
+            "updated_at": "2026-10-20 00:00:00"
+        }
+    ],
+    "settings": [
+        {
+            "id": 1,
+            "setting_key": "mushola_name",
+            "setting_value": "Musholla Ar-rahman",
+            "description": "Nama resmi musholla",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 2,
+            "setting_key": "tagline",
+            "setting_value": "Pusat Ibadah, Kebersamaan, dan Pembinaan Umat di Lingkungan Gembor Periuk Tangerang",
+            "description": "Tagline / Slogan",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 3,
+            "setting_key": "history",
+            "setting_value": "Musholla Ar-rahman berdiri sejak tahun 1990 dengan gotong royong warga sekitar dan dibantu oleh pemerintah setempat untuk kegiatan beribadah lingkungan sekitarnya sehingga warga masyarakat semakin taat dan semangat dalam melakukan beribadah.",
+            "description": "Sejarah berdirinya musholla",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 4,
+            "setting_key": "vision",
+            "setting_value": "Terwujudnya Musholla Ar-rahman sebagai pusat ibadah yang makmur, mempererat ukhuwah islamiyah, dan melahirkan generasi Qur'ani yang berakhlak mulia.",
+            "description": "Visi musholla",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 5,
+            "setting_key": "mission",
+            "setting_value": "1. Menyelenggarakan sholat berjamaah lima waktu secara istiqomah.\n2. Mengadakan kajian keislaman dan yasinan rutin untuk mempererat silaturahmi warga.\n3. Mengelola sarana dan prasarana ibadah yang bersih, nyaman, dan ramah jamaah.\n4. Membina anak-anak dan generasi muda dalam membaca Al-Qur'an.\n5. Menjaga transparansi dan amanah dalam pengelolaan kas musholla.",
+            "description": "Misi musholla",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 6,
+            "setting_key": "facilities",
+            "setting_value": "Tempat Wudhu Pria & Wanita Terpisah, Sound System Berkualitas, Perpustakaan Mini & Al-Qur'an Wakaf, Area Parkir Motor, Karpet Sholat Nyaman, Gudang Perlengkapan, Toilet Bersih",
+            "description": "Fasilitas musholla",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 7,
+            "setting_key": "address",
+            "setting_value": "Jl. Anyer RT 007 RW 07, Kelurahan Gembor, Kecamatan Periuk, Kota Tangerang, Banten 15133",
+            "description": "Alamat lengkap",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 8,
+            "setting_key": "phone_1",
+            "setting_value": "0813-8619-8079",
+            "description": "Kontak pengurus 1 (WhatsApp)",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 9,
+            "setting_key": "phone_2",
+            "setting_value": "0812-9465-6075",
+            "description": "Kontak pengurus 2 (WhatsApp)",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 10,
+            "setting_key": "email",
+            "setting_value": "dkm.musholla.arrahman@gmail.com",
+            "description": "Email resmi pengurus",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 11,
+            "setting_key": "maps_url",
+            "setting_value": "https://maps.app.goo.gl/JZzSrDEKjCseGwgw7?g_st=aw",
+            "description": "Tautan Google Maps",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 12,
+            "setting_key": "maps_embed",
+            "setting_value": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15866.505295982056!2d106.577239!3d-6.180424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f8c6543b5935%3A0x6b4847e9545dc6a9!2sGembor%2C%20Periuk%2C%20Tangerang%20City%2C%20Banten!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid",
+            "description": "Embed URL Google Maps",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 13,
+            "setting_key": "dkm_lead",
+            "setting_value": "USTADZ TATA A.S",
+            "description": "Ketua DKM",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 14,
+            "setting_key": "dkm_treasurer",
+            "setting_value": "Bapak Suwadi",
+            "description": "Bendahara DKM",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 15,
+            "setting_key": "dkm_secretary",
+            "setting_value": "Bapak Bakri",
+            "description": "Sekretaris DKM",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 16,
+            "setting_key": "donation_active",
+            "setting_value": "1",
+            "description": "Status modul donasi (1=aktif, 0=nonaktif)",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 17,
+            "setting_key": "donation_bank",
+            "setting_value": "Bank BJB",
+            "description": "Nama bank rekening donasi",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 18,
+            "setting_key": "donation_account",
+            "setting_value": "0152632533100",
+            "description": "Nomor rekening resmi",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 19,
+            "setting_key": "donation_holder",
+            "setting_value": "Musholla Ar-rahman",
+            "description": "Atas nama rekening",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 20,
+            "setting_key": "donation_notes",
+            "setting_value": "Donasi dapat disalurkan melalui transfer ke rekening Bank BJB di atas. Mohon sertakan bukti transfer via WhatsApp ke nomor pengurus untuk verifikasi dan pencatatan.",
+            "description": "Petunjuk donasi",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 21,
+            "setting_key": "finance_active",
+            "setting_value": "1",
+            "description": "Status modul laporan kas keuangan (1=aktif, 0=nonaktif)",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 22,
+            "setting_key": "prayer_mode",
+            "setting_value": "api",
+            "description": "Mode jadwal salat (api / manual)",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 23,
+            "setting_key": "prayer_city",
+            "setting_value": "Kota Tangerang",
+            "description": "Kota perhitungan jadwal salat",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 24,
+            "setting_key": "hero_image",
+            "setting_value": "",
+            "description": "Foto hero utama",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 25,
+            "setting_key": "logo_image",
+            "setting_value": "",
+            "description": "Logo musholla",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 26,
+            "setting_key": "qris_image",
+            "setting_value": "",
+            "description": "Gambar QRIS resmi",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 27,
+            "setting_key": "dkm_lead_photo",
+            "setting_value": "ketua-dkm-ustadz-tata.jpeg",
+            "description": "Foto Ketua DKM Ustadz Tata A.S",
+            "updated_at": "2026-10-19 08:18:50"
+        }
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "title": "Jadwal Pengajian Rutin Bulanan dan Kajian Fiqih Ibadah",
+            "slug": "jadwal-pengajian-rutin-bulanan-dan-kajian-fiqih-ibadah",
+            "category": "Berita",
+            "excerpt": "DKM Musholla Ar-rahman Gembor Periuk mengundang seluruh warga jamaah dalam pengajian rutin bulanan yang diselenggarakan setiap Ahad pagi pekan pertama.",
+            "content": "<p>Assalamu'alaikum Warahmatullahi Wabarakatuh,</p><p>Segala puji bagi Allah SWT yang senantiasa melimpahkan rahmat dan hidayah-Nya kepada kita semua. DKM Musholla Ar-rahman mengundang bapak, ibu, serta kaum muslimin dan muslimat warga RT 007 RW 07 Kelurahan Gembor dan sekitarnya untuk menghadiri agenda <strong>Pengajian Rutin Bulanan</strong>.</p><p>Agenda pengajian ini membahas kajian Fiqih Ibadah sehari-hari dan Tausiyah pemantapan aqidah yang dibimbing langsung oleh Ustadz Tata A.S. Pengajian ini bertujuan mempererat silaturahmi antarwarga serta menambah wawasan keislaman kita.</p><p>Mari kita ajak keluarga tercinta untuk memakmurkan musholla kita. Semoga setiap langkah kaki kita menuju majelis ilmu bernilai pahala berlipat ganda di sisi Allah SWT. Aamiin ya Rabbal 'Alamin.</p>",
+            "image": "foto-kegiatan-6.jpeg",
+            "author": "USTADZ TATA A.S",
+            "status": "Terbit",
+            "views": 142,
+            "created_at": "2026-10-19 08:01:44",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 2,
+            "title": "Pelaksanaan Yasinan dan Doa Bersama Malam Jum'at Berkah",
+            "slug": "pelaksanaan-yasinan-dan-doa-bersama-malam-jumat-berkah",
+            "category": "Berita",
+            "excerpt": "Kegiatan Yasinan rutin setiap malam Jum'at ba'da Maghrib terus berjalan istiqomah dengan dihadiri jamaah warga lingkungan sekitar.",
+            "content": "<p>Alhamdulillah, kegiatan yasinan dan tahlil bersama warga yang dilaksanakan setiap malam Jum'at di Musholla Ar-rahman terus berjalan dengan penuh khidmat dan istiqomah.</p><p>Kegiatan dimulai selepas sholat Maghrib berjamaah, dilanjutkan dengan pembacaan Surat Yasin, tahlil, doa untuk para sesepuh dan warga yang telah mendahului kita, serta ramah tamah setelah sholat Isya berjamaah.</p><p>Kami mengajak segenap pemuda dan bapak-bapak untuk terus hadir dan meramaikan musholla tercinta kita.</p>",
+            "image": "foto-kegiatan.jpeg",
+            "author": "Sekretaris DKM",
+            "status": "Terbit",
+            "views": 98,
+            "created_at": "2026-10-19 08:01:44",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 3,
+            "title": "Pengumuman Kerja Bakti Kebersihan Lingkungan Musholla",
+            "slug": "pengumuman-kerja-bakti-kebersihan-lingkungan-musholla",
+            "category": "Pengumuman",
+            "excerpt": "Dalam rangka menjaga kesucian dan kenyamanan tempat ibadah, DKM bersama warga akan mengadakan kerja bakti bersama pada hari Ahad besok.",
+            "content": "<p>Diberitahukan kepada seluruh warga RT 007 RW 07 Kelurahan Gembor, bahwa pengurus DKM Musholla Ar-rahman akan mengadakan kegiatan kerja bakti dan gotong royong membersihkan area dalam musholla, tempat wudhu, serta halaman sekitarnya.</p><p>Hari/Tanggal: Ahad, Pukul 07.30 WIB sampai dengan selesai. Diharapkan bapak-bapak dan remaja membawa peralatan kebersihan seadanya. Konsumsi ringan akan disediakan oleh pengurus.</p><p>Terima kasih atas partisipasi dan kepedulian bersama warga sekalian.</p>",
+            "image": "foto-kegiatan-9.jpeg",
+            "author": "Bapak Bakri",
+            "status": "Terbit",
+            "views": 65,
+            "created_at": "2026-10-19 08:01:44",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 4,
+            "title": "Laporan Penyaluran Infaq dan Pemeliharaan Sarana Ibadah",
+            "slug": "laporan-penyaluran-infaq-dan-pemeliharaan-sarana-ibadah",
+            "category": "Berita",
+            "excerpt": "Laporan keterbukaan infaq jamaah yang digunakan untuk pemeliharaan pendingin ruangan (AC) dan kebersihan karpet musholla.",
+            "content": "<p>Sebagai wujud transparansi dan amanah kepengurusan, kami menyampaikan bahwa dana infaq jamaah pada bulan ini sebagian telah dialokasikan untuk pemeliharaan rutin pendingin ruangan (AC) musholla dan pencucian karpet sholat agar jamaah dapat beribadah dengan lebih khusyuk dan nyaman.</p><p>Kami mengucapkan jazakumullah khairan katsiran kepada seluruh donatur dan jamaah yang istiqomah menyisihkan sebagian rezekinya untuk Musholla Ar-rahman.</p>",
+            "image": "foto-kegiatan-7.jpeg",
+            "author": "Bapak Suwadi",
+            "status": "Terbit",
+            "views": 82,
+            "created_at": "2026-10-19 08:01:44",
+            "updated_at": "2026-10-19 08:01:44"
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "title": "Sholat 5 Waktu Berjamaah",
+            "slug": "sholat-5-waktu-berjamaah",
+            "description": "Menunaikan sholat fardhu lima waktu (Subuh, Dzuhur, Ashar, Maghrib, Isya) secara berjamaah tepat waktu dengan kumandang adzan dan iqamah.",
+            "image": "foto-kegiatan-3.jpeg",
+            "event_date": "2026-10-20",
+            "start_time": "04:15",
+            "end_time": "20:00",
+            "location": "Ruang Utama Musholla Ar-rahman",
+            "category": "Ibadah Harian",
+            "status": "Mendatang",
+            "created_at": "2026-10-19 08:01:44",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 2,
+            "title": "Yasinan & Tahlil Malam Jum'at",
+            "slug": "yasinan-dan-tahlil-malam-jumat",
+            "description": "Pembacaan Surat Yasin, tahlil, zikir, dan doa bersama untuk keselamatan warga serta mendoakan para sesepuh yang telah berpulang ke rahmatullah.",
+            "image": "foto-kegiatan.jpeg",
+            "event_date": "2026-10-23",
+            "start_time": "18:15",
+            "end_time": "19:45",
+            "location": "Musholla Ar-rahman Gembor",
+            "category": "Mingguan",
+            "status": "Mendatang",
+            "created_at": "2026-10-19 08:01:44",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 3,
+            "title": "Pengajian Rutin Bulanan Warga",
+            "slug": "pengajian-rutin-bulanan-warga",
+            "description": "Kajian tafsir tematik dan fiqih ibadah bersama Ustadz Tata A.S untuk seluruh bapak, ibu, dan remaja muslim warga RT 007 RW 07 Gembor Periuk.",
+            "image": "foto-kegiatan-6.jpeg",
+            "event_date": "2026-11-01",
+            "start_time": "08:00",
+            "end_time": "10:30",
+            "location": "Musholla Ar-rahman",
+            "category": "Bulanan",
+            "status": "Mendatang",
+            "created_at": "2026-10-19 08:01:44",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 4,
+            "title": "Bimbingan Baca Tulis Al-Qur'an Anak-Anak",
+            "slug": "bimbingan-baca-tulis-al-quran-anak-anak",
+            "description": "Pembelajaran Iqro dan tahsin Al-Qur'an untuk anak-anak dan remaja lingkungan sekitar yang dilaksanakan setiap sore hari Senin hingga Kamis.",
+            "image": "foto-kegiatan-1.jpeg",
+            "event_date": "2026-10-26",
+            "start_time": "16:00",
+            "end_time": "17:30",
+            "location": "Serambi Musholla Ar-rahman",
+            "category": "Pendidikan",
+            "status": "Mendatang",
+            "created_at": "2026-10-19 08:01:44",
+            "updated_at": "2026-10-19 08:01:44"
+        }
+    ],
+    "galleries": [
+        {
+            "id": 18,
+            "title": "Tausiyah dan Kajian oleh Ustadz Tata A.S di Mihrab Musholla",
+            "image": "foto-kegiatan.jpeg",
+            "category": "Kajian",
+            "alt_text": "Ustadz Tata A.S menyampaikan tausiyah dan pengajian kepada jamaah di mihrab Musholla Ar-rahman",
+            "created_at": "2026-10-19 08:32:27"
+        },
+        {
+            "id": 19,
+            "title": "Khutbah dan Sambutan Pengurus DKM di Depan Jamaah",
+            "image": "foto-kegiatan-1.jpeg",
+            "category": "Kajian",
+            "alt_text": "Sambutan dan arahan pengurus DKM Musholla Ar-rahman",
+            "created_at": "2026-10-19 08:32:27"
+        },
+        {
+            "id": 20,
+            "title": "Jamaah Memakmurkan Ruang Utama Sholat Musholla",
+            "image": "foto-kegiatan-2.jpeg",
+            "category": "Ibadah",
+            "alt_text": "Suasana jamaah yang tertib dan khusyuk di ruang utama",
+            "created_at": "2026-10-19 08:32:27"
+        },
+        {
+            "id": 21,
+            "title": "Antusiasme Jamaah Menghadiri Pengajian Rutin",
+            "image": "foto-kegiatan-3.jpeg",
+            "category": "Kajian",
+            "alt_text": "Antusiasme warga dari anak-anak hingga orang tua dalam majelis taklim",
+            "created_at": "2026-10-19 08:32:27"
+        },
+        {
+            "id": 22,
+            "title": "Jamaah Khusyuk Mengikuti Acara dari Selasar Musholla",
+            "image": "foto-kegiatan-4.jpeg",
+            "category": "Kegiatan",
+            "alt_text": "Jamaah tetap khusyuk mengikuti rangkaian ibadah dari selasar samping",
+            "created_at": "2026-10-19 08:32:27"
+        },
+        {
+            "id": 23,
+            "title": "Sholat Berjamaah Khusyuk Warga Gembor Periuk",
+            "image": "foto-kegiatan-5.jpeg",
+            "category": "Ibadah",
+            "alt_text": "Jamaah menunaikan sholat fardhu berjamaah dengan tertib",
+            "created_at": "2026-10-19 08:32:27"
+        },
+        {
+            "id": 24,
+            "title": "Suasana Ibadah Khusyuk & Penanda Waktu Salat Digital",
+            "image": "foto-kegiatan-6.jpeg",
+            "category": "Ibadah",
+            "alt_text": "Fasilitas jam digital penanda waktu salat dan jamaah yang khusyuk",
+            "created_at": "2026-10-19 08:32:27"
+        },
+        {
+            "id": 25,
+            "title": "Tampak Depan Musholla Ar-rahman & Pelataran",
+            "image": "foto-kegiatan-7.jpeg",
+            "category": "Fasilitas",
+            "alt_text": "Fasad depan bangunan Musholla Ar-rahman RT 007 RW 07 Gembor Periuk",
+            "created_at": "2026-10-19 08:32:27"
+        },
+        {
+            "id": 26,
+            "title": "Pertemuan Rutin & Doa Bersama Pengurus DKM Warga",
+            "image": "foto-kegiatan-8.jpeg",
+            "category": "Kegiatan",
+            "alt_text": "Pengurus DKM dan tokoh masyarakat dalam musyawarah kemakmuran musholla",
+            "created_at": "2026-10-19 08:32:27"
+        },
+        {
+            "id": 27,
+            "title": "Silaturahmi Malam Jum'at (Yasinan & Tahlil Bersama)",
+            "image": "foto-kegiatan-9.jpeg",
+            "category": "Sosial",
+            "alt_text": "Kebersamaan warga melantunkan Surat Yasin, tahlil, dan doa bersama",
+            "created_at": "2026-10-19 08:32:27"
+        },
+        {
+            "id": 28,
+            "title": "Tim Hadroh & Remaja Musholla (Remus) Ar-rahman",
+            "image": "foto-kegiatan-10.jpeg",
+            "category": "Kegiatan",
+            "alt_text": "Generasi muda santri dan tim hadroh bersama pengurus DKM Ar-rahman",
+            "created_at": "2026-10-19 08:32:27"
+        },
+        {
+            "id": 29,
+            "title": "Jamaah Sholat & Pengajian Akbar di Teras Musholla",
+            "image": "foto-kegiatan-11.jpeg",
+            "category": "Ibadah",
+            "alt_text": "Meluapnya jamaah sholat berjamaah dan pengajian akbar hingga ke teras depan",
+            "created_at": "2026-10-19 08:32:27"
+        }
+    ],
+    "financial_reports": [
+        {
+            "id": 1,
+            "period_month": 9,
+            "period_year": 2026,
+            "income": 4850000,
+            "expense": 3120000,
+            "balance": 1730000,
+            "description": "Laporan Kas Bulan September 2026. Pemasukan dari kotak infaq Jumat dan donatur. Pengeluaran untuk listrik PLN, honor kebersihan, dan perlengkapan ibadah.",
+            "status": "Terbit",
+            "created_at": "2026-10-19 08:01:44",
+            "updated_at": "2026-10-19 08:01:44"
+        },
+        {
+            "id": 2,
+            "period_month": 10,
+            "period_year": 2026,
+            "income": 5200000,
+            "expense": 2850000,
+            "balance": 2350000,
+            "description": "Laporan Kas Bulan Oktober 2026. Pemasukan dari infaq jamaah, sedekah subuh, dan transfer Bank BJB. Pengeluaran untuk operasional rutin dan servis AC.",
+            "status": "Terbit",
+            "created_at": "2026-10-19 08:01:44",
+            "updated_at": "2026-10-19 08:01:44"
+        }
+    ],
+    "contact_messages": [
+        {
+            "id": 1,
+            "name": "Haji Ridwan",
+            "phone": "081298765432",
+            "email": "ridwan@example.com",
+            "subject": "Izin Koordinasi Kajian",
+            "message": "Assalamu'alaikum, kami bermaksud silaturahmi dan berkoordinasi mengenai jadwal kajian warga RT 07 pada pekan depan. Terima kasih.",
+            "is_read": 0,
+            "created_at": "2026-10-19 15:08:29"
+        },
+        {
+            "id": 2,
+            "name": "Haji Ridwan",
+            "phone": "081298765432",
+            "email": "ridwan@example.com",
+            "subject": "Izin Koordinasi Kajian",
+            "message": "Assalamu'alaikum ustadz, kami ingin koordinasi kajian pekan depan.",
+            "is_read": 0,
+            "created_at": "2026-10-19 15:09:26"
+        }
+    ]
+}
